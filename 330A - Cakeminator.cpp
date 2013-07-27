@@ -1,40 +1,37 @@
-//4136647   Jul 22, 2013 8:08:09 PM	fuwutu	 330A - Cakeminator	 GNU C++0x	Accepted	 15 ms	 0 KB
-#include <cstdio>
+//4172001     Jul 27, 2013 4:19:28 AM 	fuwutu 	330A - Cakeminator 	GNU C++0x 	Accepted 	30 ms 	0 KB
+#include <iostream>
+#include <string>
+
+using namespace std;
 
 int main()
 {
-    int r, c, sr[10][10] = {0}, sc[10][10] = {0};
-    scanf("%d%d", &r, &c);
+    int r, c, row[11] = {0}, col[11] ={0};
+    string s;
+    cin >> r >> c;
     for (int i = 0; i < r; ++i)
     {
-        char ch[11];
-        scanf("%s", ch);
+        cin >> s;
         for (int j = 0; j < c; ++j)
         {
-            if (ch[j] == 'S')
+            if (s[j] == 'S')
             {
-                for (int ii = 0; ii < r; ++ii)
-                {
-                    sr[ii][j] = 1;
-                }
-                for (int jj = 0; jj < c; ++jj)
-                {
-                    sc[i][jj] = 1;
-                }
+                row[i] = 1;
+                col[j] = 1;
             }
         }
     }
-    int count(r*c);
+    int cakes(0);
     for (int i = 0; i < r; ++i)
     {
         for (int j = 0; j < c; ++j)
         {
-            if (sr[i][j] == 1 && sc[i][j] == 1)
+            if (row[i] == 0 || col[j] == 0)
             {
-                count -= 1;
+                cakes += 1;
             }
         }
     }
-    printf("%d\n", count);
+    cout << cakes << endl;
     return 0;
 }
