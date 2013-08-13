@@ -1,4 +1,4 @@
-//4271120	 Aug 13, 2013 5:01:37 AM	fuwutu	 23A - Youre Given a String...	 Python 3	Accepted	 342 ms	 0 KB
+#4271120	 Aug 13, 2013 5:01:37 AM	fuwutu	 23A - Youre Given a String...	 Python 3	Accepted	 342 ms	 0 KB
 s = input()
 n = len(s)
 m = n - 1;
