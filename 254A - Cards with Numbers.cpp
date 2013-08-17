@@ -45,3 +45,52 @@ int main()
     delete[] x;
     return 0;
 }
+
+
+//4304381	 Aug 17, 2013 7:46:43 PM	fuwutu	 254A - Cards with Numbers	 GNU C++0x	Accepted	404 ms	6900 KB
+#include <cstdio>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+
+    int n, a;
+    vector<int> index[5001];
+    scanf("%d", &n);
+    for (int i = 1; i <= n * 2; ++i)
+    {
+        scanf("%d", &a);
+        index[a].push_back(i);
+    }
+
+    bool possible = true;
+    for (int i = 1; i < 5001; ++i)
+    {
+        if (index[i].size() % 2 == 1)
+        {
+            possible = false;
+            break;
+        }
+    }
+
+    if (possible)
+    {
+        for (int i = 1; i < 5001; ++i)
+        {
+            for (size_t j = 0; j < index[i].size(); j += 2)
+            {
+                printf("%d %d\n", index[i][j], index[i][j+1]);
+            }
+        }
+    }
+    else
+    {
+        printf("-1\n");
+    }
+
+    return 0;
+}
