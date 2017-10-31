@@ -1,0 +1,63 @@
+#include<bits/stdc++.h>
+#include<unordered_map>
+#define ll long long int
+#define mod 1000000007
+#define mp make_pair
+#define pb emplace_back
+#define spd ios::sync_with_stdio(false);
+#define fi first
+#define se second
+#define sd(t) scanf("%d",&t)
+#define pd(t) printf("%d\n",t)
+#define slld(t) scanf("%lld",&t)
+#define plld(t) printf("%lld\n",t)
+#define For(i,n) for(ll i=0;i<n;i++)
+using namespace std;
+//map<ll,ll>po;
+int ans=0;
+//unordered_map<string ,bool>s;
+unordered_map<string ,bool> po;
+unordered_map<string, int> op;
+vector<int> v[205];
+
+int main()
+{
+    //spd
+    int k,n;
+    sd(n);
+    vector<int> v;
+    for(int i=0;i<n;i++)
+    {
+        sd(k);
+        v.pb(k);
+        //a[k]++;
+    }
+    sort(v.begin(),v.end());
+    
+    ans=0;
+    int u=n/2+(n%2);
+    for(int i=0;i<=n/2;i++)
+    {
+        while(u<n)
+        {
+            if(v[u]>=2*v[i])
+            {
+                u++;
+                i++;
+                ans++;
+            }
+            else
+            {
+                u++;
+            }
+        }
+        if(u>=n)
+        {
+            break;
+        }
+    }
+    pd((n-ans));
+    
+    
+	return 0;
+}
