@@ -1,0 +1,46 @@
+    #include<bits/stdc++.h>
+    #include<functional>
+    #include <ext/pb_ds/assoc_container.hpp>
+    #include <ext/pb_ds/tree_policy.hpp>
+     
+     
+    using namespace __gnu_pbds;
+    using namespace std;
+    typedef long long unsigned llu;
+    typedef long long ll;
+    typedef pair<ll, ll> ii;
+    typedef vector<ll> vl;
+     
+    //use as vector<ii> v;
+    #define ff(a,b) for(ll i=a; i<b;i++)
+    #define MAX INT_MAX 
+    #define trace(x) cerr<<#x<<": "<<x<<" "<<'\n';
+    #define pb push_back
+    #define pob pop_back
+    #define mp make_pair
+    int main()
+    {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+    ll n;ll ans=0;
+    cin>>n;
+    //int ar[100005];
+    int a[100005];
+    int b[100005];
+    vector < pair <int,int> > v;
+    for(int i=0;i<n;i++)
+    {
+    	cin>>a[i]>>b[i];
+    	ans+=b[i]*n-a[i];
+    	v.pb(mp(a[i]-b[i],i));
+    }
+    sort(v.begin(),v.end());
+     
+     
+     
+    for(int i=0;i<n;i++)
+    	ans+=((n-i)*v[i].first);
+     
+    cout<<ans;
+    return 0;
+    }
