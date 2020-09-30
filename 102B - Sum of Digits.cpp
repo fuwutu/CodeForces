@@ -1,4 +1,5 @@
 //4192333   Jul 28, 2013 6:06:57 AM	fuwutu	 102B - Sum of Digits	 GNU C++0x	Accepted	30 ms	100 KB
+// c language 1000 difficulty
 #include <cstdio>
 
 int main()
