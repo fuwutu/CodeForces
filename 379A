@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,t,r,p;
+    scanf("%d %d",&a,&b);
+    p=a/b;
+    t=a;
+    r=a%b;
+    while(p>0)
+    {
+        t+=p;
+        p+=r;
+        r=p%b;
+        p=p/b;
+    }
+    printf("%d",t);
+    return 0;
+}
