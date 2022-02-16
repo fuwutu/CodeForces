@@ -1,4 +1,4 @@
-//4192333   Jul 28, 2013 6:06:57 AM	fuwutu	 102B - Sum of Digits	 GNU C++0x	Accepted	30 ms	100 KB
+//4192333   Jul 28, 2013 6:06:57 AM	fuwutu	 102B - Sum of Digits	 GNU C++x	Accepted	30 ms	100 KB
 #include <cstdio>
 
 int main()
