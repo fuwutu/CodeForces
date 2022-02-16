@@ -1,4 +1,4 @@
-//4057519   Jul 13, 2013 6:52:47 AM	fuwutu	 245A - System Administrator	 GNU C++0x	Accepted	15 ms	0 KB
+//4057519   Jul 13, 2013 6:52:47 AM	fuwutu	 245A - System Administrator	 GNU C++x	Accepted	15 ms	0 KB
 #include <iostream>
 
 using namespace std;
