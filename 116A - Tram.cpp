@@ -1,5 +1,5 @@
 //4006879   Jul 3, 2013 5:53:08 PM	fuwutu	 116A - Tram	 GNU C++0x	Accepted	 15 ms	 0 KB
-#include <cstdio>
+#include <bits/stdc++.h>
 
 int main()
 {
